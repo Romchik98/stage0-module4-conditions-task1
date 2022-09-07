@@ -5,7 +5,7 @@ public class IntegerComparison {
         int x = 50;
         int y = 50;
          if(x == y) {
-            System.out.println("Hello World!");
+            System.out.println("Hello, World!");
         }
     }
 }
