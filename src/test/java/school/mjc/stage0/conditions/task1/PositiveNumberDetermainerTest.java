@@ -12,11 +12,11 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PositiveNumberDetermainerTest extends BaseIOTest {
+class PositiveNumberDeterminerTest extends BaseIOTest {
 
     @Test
     void isPositivePrintsTrueWhenPositive() {
-        PositiveNumberDetermainer numberDetermainer = new PositiveNumberDetermainer();
+        PositiveNumberDeterminer numberDetermainer = new PositiveNumberDeterminer();
 
         numberDetermainer.isPositive(1);
 
@@ -25,7 +25,7 @@ class PositiveNumberDetermainerTest extends BaseIOTest {
 
     @Test
     void isPositivePrintsFalseWhenZero() {
-        PositiveNumberDetermainer numberDetermainer = new PositiveNumberDetermainer();
+        PositiveNumberDeterminer numberDetermainer = new PositiveNumberDeterminer();
 
         numberDetermainer.isPositive(0);
 
@@ -34,16 +34,16 @@ class PositiveNumberDetermainerTest extends BaseIOTest {
 
     @Test
     void isPositivePrintsFalseWhenNegative() {
-        PositiveNumberDetermainer numberDetermainer = new PositiveNumberDetermainer();
+        PositiveNumberDeterminer numberDetermainer = new PositiveNumberDeterminer();
 
-        numberDetermainer.isPositive(-1);
+        PositiveNumberDeterminer.isPositive(-1);
 
         assertEquals("false\n", updateLineSpliterators(outContent.toString()));
     }
 
     @Test
     void containsIfElseChecks() throws IOException {
-        Path path = Paths.get("src/main/java/school/mjc/stage0/conditions/task1/PositiveNumberDetermainer.java");
+        Path path = Paths.get("src/main/java/school/mjc/stage0/conditions/task1/PositiveNumberDeterminer.java");
         List<String> strings = Files.readAllLines(path);
         List<String> declarationResult = strings.stream()
                 .filter(line -> line.contains("if") || line.contains("false"))
